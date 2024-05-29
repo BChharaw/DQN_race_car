@@ -1,18 +1,18 @@
-# Implementation of a DQN in Pytorch using gymnasium
-Solving the car racing problem in OpenAI Gym using Proximal Policy Optimization (PPO). This problem has a real physical engine in the back end. You can achieve real racing actions in the environment, like drifting. 
+# Implementation of PPO in Pytorch using gymnasium
+This RL simulatiom shows a racecar inside the Gymnasium simulation. It uses a PPO algorithm as a starting basis although this can be changed and improved using other RL algorithms.
 
-### Cloning and Setting Up the DQN Race Car Repository
+### Cloning and Setting Up the Race Car Repository
 1. **Clone the Repository:**
    - This codebase was tested in python 3.11
    - Run the following command to clone the repository to your local machine:
      ```
-     git clone https://github.com/BChharaw/DQN_race_car.git
+     git clone https://github.com/BChharaw/Racing-using-RL-in-Gymnasium
      ```
 
 2. **Navigate to the Repository:**
    - Change into the directory of the cloned repository:
      ```
-     cd DQN_race_car
+     cd Racing-using-RL-in-Gymnasium
      ```
 
 3. **Setting Up the Environment:**
@@ -28,9 +28,7 @@ Solving the car racing problem in OpenAI Gym using Proximal Policy Optimization 
      ```pip install -r requirements.txt```
    - You will need to install gymnasium[box2d]:
    ```pip install gymnasium\[box2d]```
-   - if your terminal yells at you that you don't have swig installed, then retry installing gymnasium:
-    ```pip install swig```
-
+   - if your terminal yells at you that you don't have swig installed, install swig     ```pip install swig``` then retry installing gymnasium.
 
 ## Training
 To train the agent, run```python train.py```

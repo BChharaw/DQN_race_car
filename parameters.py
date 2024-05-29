@@ -22,4 +22,6 @@ class playback_parameters:
     render = True #renders the environment 
     run_episodes = 10 #number of episodes (episode finishes when agent dies)
     t_timesteps = 1000 #number of timesteps to run in playback
+    load_weights_as = "param/ppo_net_params.pkl"
+
     

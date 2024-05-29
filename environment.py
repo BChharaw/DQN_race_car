@@ -8,7 +8,7 @@ import torch.optim as optim
 from torch.distributions import Beta
 from torch.utils.data.sampler import BatchSampler, SubsetRandomSampler
 from utils import DrawLine
-from parameters import env_parameters, agent_parameters, train_parameters
+from parameters import env_parameters, agent_parameters, train_parameters, playback_parameters
 
 
 
@@ -46,10 +46,7 @@ class Env():
         total_reward = 0
         for i in range(env_parameters.action_repeat):
             img_rgb, reward, die, _ = self.env.step(action)
-
-
             ## Here are some simple rewards you can experiment with
-            # don't penalize "die state"
             if die:
                 reward += 100
             # green penalty
@@ -239,5 +236,5 @@ class Agent_playback():
         return action
 
     def load_param(self):
-        self.net.load_state_dict(torch.load('param/ppo_net_params.pkl'))
+        self.net.load_state_dict(torch.load(playback_parameters.load_weights_as))
 
