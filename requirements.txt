@@ -1,0 +1,7 @@
+gym==0.25.2
+numpy==1.24.3
+torch==2.3.0
+visdom==0.2.4
+tqdm==4.66.1
+swig
+# Python 3.11.5 is required
