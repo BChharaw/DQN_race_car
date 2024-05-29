@@ -12,7 +12,7 @@ class agent_parameters:
     buffer_capacity, batch_size = 2000, 128 #buffer and batch size for model
 
 class train_parameters:
-    run_episodes = 10 #number of episodes (episode finishes when agent dies)
+    run_episodes = 100 #number of episodes (episode finishes when agent dies)
     t_timesteps = 1000 #number of timesteps to run in playback
     save_weights_as = "param/ppo_net_params.pkl"
     render = True #renders the environment, allows you to view training for debugging, keep off in general to speed up simulation

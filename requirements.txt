@@ -1,7 +1,10 @@
+pygame
 gym==0.25.2
 numpy==1.24.3
 torch==2.3.0
 visdom==0.2.4
 tqdm==4.66.1
 swig
+pygame==2.5.2
+gymnasium[box2d]
 # Python 3.11.5 is required

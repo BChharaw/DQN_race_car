@@ -3,6 +3,7 @@ Solving the car racing problem in OpenAI Gym using Proximal Policy Optimization 
 
 ### Cloning and Setting Up the DQN Race Car Repository
 1. **Clone the Repository:**
+   - This codebase was tested in python 3.11
    - Run the following command to clone the repository to your local machine:
      ```
      git clone https://github.com/BChharaw/DQN_race_car.git
@@ -15,16 +16,21 @@ Solving the car racing problem in OpenAI Gym using Proximal Policy Optimization 
      ```
 
 3. **Setting Up the Environment:**
-   - Create a python virtual environment usually ```python3 -m venv /path/to/your/virtual/environment```
+   - Create a python virtual environment usually ```python3.11 -m venv racecar```
    - Activate the virtual environment:
      - On Windows:
-       ```venv\Scripts\activate```
+       ```racecar\Scripts\activate```
      - On macOS and Linux:
-       ```source venv/bin/activate```
+       ```source racecar/bin/activate```
 
 4. **Install Dependencies:**
-   - Once the virtual environment is activated, install the required dependencies using `pip`:
+   - Once the virtual environment is activated, install the required dependencies using pip:
      ```pip install -r requirements.txt```
+   - You will need to install gymnasium[box2d]:
+   ```pip install gymnasium\[box2d]```
+   - if your terminal yells at you that you don't have swig installed, then retry installing gymnasium:
+    ```pip install swig```
+
 
 ## Training
 To train the agent, run```python train.py```
