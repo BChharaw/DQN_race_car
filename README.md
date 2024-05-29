@@ -1,21 +1,37 @@
 # Implementation of a DQN in Pytorch using gymnasium
 Solving the car racing problem in OpenAI Gym using Proximal Policy Optimization (PPO). This problem has a real physical engine in the back end. You can achieve real racing actions in the environment, like drifting. 
 
-## Requirement
-To run the code, you need
-- [pytorch 0.4](https://pytorch.org/)
-- [gym 0.10](https://github.com/openai/gym)
-- [visdom 0.1.8](https://github.com/facebookresearch/visdom)
+### Cloning and Setting Up the DQN Race Car Repository
+1. **Clone the Repository:**
+   - Run the following command to clone the repository to your local machine:
+     ```
+     git clone https://github.com/BChharaw/DQN_race_car.git
+     ```
 
-## Method
-Every action will be repeated for 8 frames. To get velocity information, state is defined as adjacent 4 frames in shape (4, 96, 96). Use a two heads FCN to represent the actor and critic respectively. The actor outputs α, β for each actin as the parameters of Beta distribution. 
-<div align=center><img src="img/network.png" width="30%" /></div>
+2. **Navigate to the Repository:**
+   - Change into the directory of the cloned repository:
+     ```
+     cd DQN_race_car
+     ```
+
+3. **Setting Up the Environment:**
+   - Create a python virtual environment usually ```python3 -m venv /path/to/your/virtual/environment```
+   - Activate the virtual environment:
+     - On Windows:
+       ```venv\Scripts\activate```
+     - On macOS and Linux:
+       ```source venv/bin/activate```
+
+4. **Install Dependencies:**
+   - Once the virtual environment is activated, install the required dependencies using `pip`:
+     ```pip install -r requirements.txt```
 
 ## Training
 To train the agent, run```python train.py```
 To test, run ```python run.py```.
 Ensure parameters are set as desired in ```parameters.py```
 
+## Starting baseline for modifications
 ### Gamma (γ)
 
 **Description:** The discount factor for future rewards.\
