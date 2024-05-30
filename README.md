@@ -19,7 +19,7 @@ This RL simulatiom shows a racecar inside the Gymnasium simulation. It uses a PP
    - Create a python virtual environment usually ```python3.11 -m venv racecar```
    - Activate the virtual environment:
      - On Windows:
-       ```racecar\Scripts\activate```
+       ```racecar\Scripts\activate.bat```
      - On macOS and Linux:
        ```source racecar/bin/activate```
 
